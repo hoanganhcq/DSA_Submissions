@@ -47,7 +47,7 @@ class Result {
         for (int r = 0; r < N; r++) {
             for (int c = 0; c < M; c++) {
                 if (grid[r][c] == 1 && !visited[r][c]) {
-                    best = Math.max(best, bfsCount(r, c));
+                    best = Math.max(best, dfsCount(r, c));
                 }
             }
         }
@@ -74,7 +74,7 @@ class Result {
         return cnt;
     }
 
-    
+
     private static int bfsCount(int sr, int sc) {
         int[] dr = {-1, -1, -1, 0, 0, 1, 1, 1};
         int[] dc = {-1, 0, 1, -1, 1, -1, 0, 1};

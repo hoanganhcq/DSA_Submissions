@@ -48,8 +48,9 @@ class Result {
         int i = l - 1;
         int j = r + 1;
         while (true) {
-            do {i++;} while (list.get(i) < pivot);
-            do {j--;} while (list.get(j) > pivot);
+            do { i++; } while (list.get(i) < pivot);
+            do { j--; } while (list.get(j) > pivot);
+            
             if (i >= j) return j;
             swap(list, i, j);
         }
